@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AURA DAL PARFUME - Eau de Parfum</title>
+
+    <link rel="stylesheet" href="Style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header id="home">
+
+        <img src="images/BANNER.jpeg"
+        alt="Banner AURA PARFUME">
+
+        <div class="header-text">
+            <h1>AURA DAL PARFUME</h1>
+            <p>CARI AROMA WANGIMU DISETIAP PRODUK KAMI</p>
+        </div>
+
+    </header>
+
+
+    <!-- NAVIGASI MENU -->
+    <nav class="navbar">
+
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+
+    </nav>
+
+
+    <!-- LAYOUT UTAMA -->
+    <div class="layout">
+
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <h2>Kategori Aroma</h2>
+
+            <ul>
+                <li>Floral lavender</li>
+                <li>Caramel</li>
+                <li>Fresh Pineapple</li>
+                <li>Oriental</li>
+            </ul>
+
+            <hr>
+
+            <h2>Keunggulan</h2>
+
+            <p>
+                <i class="fa-solid fa-spray-can-sparkles"></i>
+                Premium Fragrance
+            </p>
+
+            <p>
+                <i class="fa-solid fa-gift"></i>
+                Gift Packaging
+            </p>
+
+            <p>
+                <i class="fa-solid fa-truck-fast"></i>
+                Fast Delivery
+            </p>
+
+        </aside>
+
+
+        <!-- MAIN BODY -->
+        <main class="main-body">
+
+            <section id="about">
+
+                <h2>Tentang AURA DAL PARFUME</h2>
+
+                <p>
+                    AURA DAL PARFUME merupakan toko parfum yang
+                    menyediakan berbagai pilihan Eau de Parfum
+                    berkualitas dengan aroma elegan dan berkarakter.
+                </p>
+
+                <p>
+                    Kami menghadirkan beragam karakter aroma
+                    mulai dari floral lavender, woody, oriental,
+                    hingga fresh Pineapple.
+                </p>
+
+            </section>
+
+
+            <!-- GALLERY PRODUK -->
+            <section id="gallery">
+
+                <h2>Koleksi Parfum Spesial</h2>
+
+                <div class="produk-container">
+
+                    <div class="produk">
+
+                        <img src="images/MONACO-ROYAL.jpeg"
+                        alt="Amber Eclat">
+
+                        <h3>MONACO ROYALE 50ml</h3>
+
+                        <p>
+                            Aroma hangat dengan sentuhan
+                            Caramel dan melon.
+                        </p>
+
+                        <strong>Rp285.000</strong>
+
+                        <br>
+
+                        <button onclick="tambahKeranjang('MONACO ROYAL')">
+                            Tambah Keranjang
+                        </button>
+
+                        <button onclick="tampilkanHarga(0)">
+                            Lihat Harga
+                        </button>
+
+                    </div>
+
+
+                    <div class="produk">
+
+                        <img src="images/CALIFORNIA-BLUE.jpeg"
+                        alt="Fleur de Lune">
+
+                        <h3>California Blue</h3>
+
+                        <p>
+                            Aroma lavender lembut dan elegan.
+                        </p>
+
+                        <strong>Rp225.000</strong>
+
+                        <br>
+
+                        <button onclick="tambahKeranjang('CALIFORNIA BLUE')">
+                            Tambah Keranjang
+                        </button>
+
+                        <button onclick="tampilkanHarga(1)">
+                            Lihat Harga
+                        </button>
+
+                    </div>
+
+
+                    <div class="produk">
+
+                        <img src="images/GLITCH.jpeg"
+                        alt="Sunday Neroli">
+
+                        <h3>GLITCH x Setiawan Ade</h3>
+
+                        <p>
+                            Aroma Pineapple segar untuk
+                            aktivitas sehari-hari.
+                        </p>
+
+                        <strong>Rp275.000</strong>
+
+                        <br>
+
+                        <button onclick="tambahKeranjang('Glitch x Adesetiawan')">
+                            Tambah Keranjang
+                        </button>
+
+                        <button onclick="tampilkanHarga(2)">
+                            Lihat Harga
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- KERANJANG -->
+            <section id="keranjang">
+
+                <h2>Keranjang Belanja</h2>
+
+                <p>
+                    Jumlah produk:
+                    <span id="jumlah">0</span>
+                </p>
+
+                <ul id="isi-keranjang"></ul>
+
+                <h3>
+                    Total Belanja: Rp
+                    <span id="total">0</span>
+                </h3>
+
+                <button onclick="hitungTotal()">
+                    Hitung Total
+                </button>
+
+                <button onclick="hapusKeranjang()">
+                    Kosongkan Keranjang
+                </button>
+
+            </section>
+
+
+            <!-- JENIS PARFUM -->
+            <section>
+
+                <h2>Jenis Konsentrasi Parfum</h2>
+
+                <ol>
+                    <li>Eau de Cologne (EDC)</li>
+                    <li>Eau de Toilette (EDT)</li>
+                    <li>Eau de Parfum (EDP)</li>
+                </ol>
+
+            </section>
+
+
+            <!-- DAFTAR HARGA -->
+            <section>
+
+                <h2>Daftar Harga Produk</h2>
+
+                <table>
+
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Parfum</th>
+                        <th>Harga</th>
+                    </tr>
+
+                    <tr>
+                        <td>1</td>
+                        <td>MONACO-ROYAL EDP</td>
+                        <td>Rp285.000</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>CALIFORNIA-BLUE EDP</td>
+                        <td>Rp225.000</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Glitch x Adesetiawan EDP</td>
+                        <td>Rp275.000</td>
+                    </tr>
+
+                </table>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h2>AURA DAL PARFUME</h2>
+
+        <p>
+            The Art of Fragrance and Elegance
+        </p>
+
+        <p>
+            Instagram:
+            <a href="https://instagram.com">
+                @auradalparfume
+            </a>
+        </p>
+
+        <p>
+            & copy; 2026 AURA DAL PARFUME.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
